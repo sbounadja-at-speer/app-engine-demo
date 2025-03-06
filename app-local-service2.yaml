@@ -1,0 +1,6 @@
+runtime: go122
+service: service2
+main: cmd/service2
+env_variables:
+  DEPLOY_ENV: 'LOCAL'
+  PORT: '8889'

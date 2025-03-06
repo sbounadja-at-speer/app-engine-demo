@@ -1,0 +1,16 @@
+runtime: go122
+service: default
+main: cmd/service1
+
+inbound_services:
+  - warmup
+instance_class: F1
+automatic_scaling:
+  target_cpu_utilization: 0.8
+  min_instances: 0
+  max_instances: 5
+  max_concurrent_requests: 30
+env_variables:
+  DEPLOY_ENV: 'DEV'
+  PROJECT_ID: 'buoyant-lattice-452900-k0'
+  PROJECT_NUMBER: '508409448602'
